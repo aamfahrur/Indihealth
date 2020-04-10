@@ -1,7 +1,6 @@
 package inn.mroyek.halodokter.view.auth.signup
 
 import android.content.Context
-import android.widget.Toast
 import com.google.firebase.auth.FirebaseUser
 import inn.mroyek.halodokter.App
 import inn.mroyek.halodokter.R
@@ -57,7 +56,7 @@ class SignUpPresenter(private val view: SignUpContract.View, private val context
         App.mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener {
             if(it.isSuccessful) {
                 App.mAuth.currentUser?.let {firebaseUser ->
-//                    storeEmailVerification(firebaseUser)
+                    storeEmailVerification(firebaseUser)
 
                     val user = User()
 
@@ -77,17 +76,12 @@ class SignUpPresenter(private val view: SignUpContract.View, private val context
     }
 
     private fun storeUser(user: User) {
-        App.mDatabase.user(user.uid).set(user).addOnCompleteListener {
-            Toast.makeText(context, "sukses", Toast.LENGTH_SHORT).show()
-        }
-    }
-    /*private fun storeUser(user: User) {
         App.mDatabase.user(user.uid).set(user).addOnSuccessListener {
             signIn(user)
         }.addOnFailureListener {
             view.onError(it.message ?: "")
         }
-    }*/
+    }
 
     private fun signIn(user: User) {
         Preferences(context).storeUid(user.uid)
