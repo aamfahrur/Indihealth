@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:state_enabled="true" android:state_pressed="false" android:state_activated="false" android:color="@color/colorTextPrimary">
+        <shape android:shape="rectangle" >
+            <stroke android:width="@dimen/divider" android:color="@color/colorDivider"/>
+            <corners android:radius="@dimen/radius_input"/>
+            <solid android:color="@color/colorInputAccent" />
+        </shape>
+    </item>
+    <item android:state_enabled="true" android:state_pressed="true" android:color="@color/colorTextPressed">
+        <shape android:shape="rectangle" >
+            <stroke android:width="@dimen/divider" android:color="@color/colorDivider"/>
+            <corners android:radius="@dimen/radius_input"/>
+            <solid android:color="@color/colorInputAccentPressed" />
+        </shape>
+    </item>
+    <item android:state_enabled="true" android:state_pressed="false" android:state_activated="true" android:color="@color/colorTextPrimary">
+        <shape android:shape="rectangle" >
+            <stroke android:width="@dimen/divider" android:color="@color/colorDivider"/>
+            <corners android:radius="@dimen/radius_input"/>
+            <solid android:color="@color/colorInputAccentPressed" />
+        </shape>
+    </item>
+    <item android:state_enabled="false" android:state_pressed="false" android:color="@color/colorTextDisabled">
+        <shape android:shape="rectangle" >
+            <stroke android:width="@dimen/divider" android:color="@color/colorTextDisabled"/>
+            <corners android:radius="@dimen/radius_input"/>
+            <solid android:color="@color/colorInputAccentDisabled" />
+        </shape>
+    </item>
+
+</selector>

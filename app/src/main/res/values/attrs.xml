@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="AmView">
+        <attr name="am_font_family">
+            <enum name="GoogleSans" value="0" />
+        </attr>
+        <attr name="am_font_style">
+            <enum name="regular" value="0" />
+            <enum name="medium" value="1" />
+            <enum name="medium_italic" value="2" />
+            <enum name="bold" value="3" />
+            <enum name="bold_italic" value="4" />
+            <enum name="italic" value="5" />
+        </attr>
+        <attr name="am_edit_text_style">
+            <enum name="primary" value="0" />
+            <enum name="accent" value="1" />
+            <enum name="secondary" value="2" />
+        </attr>
+    </declare-styleable>
+</resources>

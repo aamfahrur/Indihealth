@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:state_enabled="true" android:state_pressed="false" android:state_activated="false" android:color="@color/colorButtonTextPrimary">
+        <shape android:shape="rectangle" >
+            <stroke android:width="@dimen/divider" android:color="@color/colorButtonPrimary"/>
+            <corners android:radius="@dimen/radius"/>
+            <solid android:color="@color/colorButtonPrimary" />
+        </shape>
+    </item>
+    <item android:state_enabled="true" android:state_pressed="true" android:color="@color/colorButtonTextPrimary">
+        <shape android:shape="rectangle" >
+            <stroke android:width="@dimen/divider" android:color="@color/colorButtonPrimaryPressed"/>
+            <corners android:radius="@dimen/radius"/>
+            <solid android:color="@color/colorButtonPrimaryPressed" />
+        </shape>
+    </item>
+    <item android:state_enabled="false" android:state_pressed="false" android:color="@color/colorTextDisabled">
+        <shape android:shape="rectangle" >
+            <stroke android:width="@dimen/divider" android:color="@color/colorTextDisabled"/>
+            <corners android:radius="@dimen/radius"/>
+            <solid android:color="@color/colorInputPrimaryDisabled" />
+        </shape>
+    </item>
+
+</selector>

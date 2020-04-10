@@ -1,0 +1,123 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:statusBarColor" tools:targetApi="lollipop">@color/colorPrimaryDark</item>
+        <item name="android:navigationBarColor" tools:targetApi="lollipop">@color/colorBackgroundPrimary</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">false</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">true</item>
+    </style>
+
+    <style name="AppTheme.Auth">
+        <item name="android:navigationBarColor" tools:targetApi="lollipop">@color/colorBackgroundSecondary</item>
+    </style>
+
+    <style name="AppTheme.Splash">
+        <item name="android:colorBackground">@color/colorPrimaryDark</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+    </style>
+
+    <style name="AppTheme.EditText">
+        <item name="am_font_family">GoogleSans</item>
+        <item name="am_font_style">regular</item>
+        <item name="android:textSize">@dimen/text_small</item>
+        <item name="android:textColor">@color/colorTextPrimary</item>
+        <item name="android:paddingLeft">@dimen/component_big</item>
+        <item name="android:paddingRight">@dimen/component_big</item>
+        <item name="android:paddingTop">@dimen/component_big</item>
+        <item name="android:paddingBottom">@dimen/component_big</item>
+    </style>
+
+    <style name="AppTheme.EditText.Primary">
+        <item name="am_edit_text_style">primary</item>
+        <item name="android:textColor">@color/colorTextPrimary</item>
+    </style>
+
+    <style name="AppTheme.EditText.Secondary">
+        <item name="am_edit_text_style">secondary</item>
+        <item name="android:textColor">@color/colorTextPrimary</item>
+    </style>
+
+    <style name="AppTheme.EditText.Accent">
+        <item name="am_edit_text_style">accent</item>
+        <item name="android:textColor">@color/colorTextLight</item>
+        <item name="android:textColorHint">@color/colorTextLightHint</item>
+    </style>
+
+    <style name="AppTheme.Layout" />
+
+    <style name="AppTheme.Margin">
+        <item name="android:layout_marginLeft">@dimen/activity_horizontal_margin</item>
+        <item name="android:layout_marginRight">@dimen/activity_horizontal_margin</item>
+        <item name="android:layout_marginTop">@dimen/activity_horizontal_margin</item>
+        <item name="android:layout_marginBottom">@dimen/activity_horizontal_margin</item>
+    </style>
+
+    <style name="AppTheme.Margin.Horizontal">
+        <item name="android:layout_marginLeft">@dimen/activity_horizontal_margin</item>
+        <item name="android:layout_marginRight">@dimen/activity_horizontal_margin</item>
+        <item name="android:layout_marginTop">0dp</item>
+        <item name="android:layout_marginBottom">0dp</item>
+    </style>
+
+    <style name="AppTheme.Margin.Vertical">
+        <item name="android:layout_marginTop">@dimen/activity_horizontal_margin</item>
+        <item name="android:layout_marginBottom">@dimen/activity_horizontal_margin</item>
+    </style>
+
+    <style name="AppTheme.Margin.Small">
+        <item name="android:layout_marginLeft">@dimen/activity_horizontal_margin_small</item>
+        <item name="android:layout_marginRight">@dimen/activity_horizontal_margin_small</item>
+        <item name="android:layout_marginTop">@dimen/activity_vertical_margin_small</item>
+        <item name="android:layout_marginBottom">@dimen/activity_vertical_margin_small</item>
+    </style>
+
+    <style name="AppTheme.Layout.Parent.Small">
+        <item name="android:paddingLeft">@dimen/activity_horizontal_margin_small</item>
+        <item name="android:paddingRight">@dimen/activity_horizontal_margin_small</item>
+        <item name="android:paddingTop">@dimen/activity_vertical_margin_small</item>
+        <item name="android:paddingBottom">@dimen/activity_vertical_margin_small</item>
+    </style>
+
+    <style name="AppTheme.Layout.Parent">
+        <item name="android:paddingLeft">@dimen/activity_horizontal_margin</item>
+        <item name="android:paddingRight">@dimen/activity_horizontal_margin</item>
+        <item name="android:paddingTop">@dimen/activity_vertical_margin</item>
+        <item name="android:paddingBottom">@dimen/activity_vertical_margin</item>
+    </style>
+
+    <style name="AppTheme.Layout.Horizontal">
+        <item name="android:paddingLeft">@dimen/activity_horizontal_margin</item>
+        <item name="android:paddingRight">@dimen/activity_horizontal_margin</item>
+    </style>
+
+    <style name="AppTheme.Layout.Vertical">
+        <item name="android:paddingBottom">@dimen/activity_vertical_margin</item>
+        <item name="android:paddingTop">@dimen/activity_vertical_margin</item>
+    </style>
+
+    <style name="AppTheme.Button">
+        <item name="am_font_family">GoogleSans</item>
+        <item name="am_font_style">bold</item>
+        <item name="android:textSize">@dimen/text_normal</item>
+        <item name="android:textColor">@color/colorButtonTextPrimary</item>
+        <item name="android:paddingLeft">@dimen/component_big</item>
+        <item name="android:paddingRight">@dimen/component_big</item>
+        <item name="android:paddingTop">@dimen/component_normal</item>
+        <item name="android:paddingBottom">@dimen/component_normal</item>
+        <item name="android:layout_height">@dimen/input_height</item>
+        <item name="android:minHeight">@dimen/input_height</item>
+        <item name="android:maxHeight">@dimen/input_height</item>
+        <item name="android:stateListAnimator">@null</item>
+    </style>
+
+    <style name="AppTheme.RatingBar" parent="Widget.AppCompat.RatingBar.Small">
+        <item name="colorControlNormal">@color/colorPlaceHolder</item>
+        <item name="colorControlActivated">@color/colorAccent</item>
+    </style>
+
+</resources>

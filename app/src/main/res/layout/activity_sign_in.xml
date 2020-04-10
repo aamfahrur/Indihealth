@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackgroundPrimary"
+    tools:context=".view.auth.login.LoginActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        style="@style/AppTheme.Layout.Parent"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="?attr/actionBarSize"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/layoutForm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                style="@style/AppTheme.Layout.Parent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_round"
+                android:orientation="vertical"
+                android:paddingBottom="40dp"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/imageLogo"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/component_big"
+                    android:src="@drawable/ic_logo"
+                    android:tint="@color/colorPrimaryDark" />
+
+                <inn.mroyek.halodokter.utils.components.AmEditText
+                    android:id="@+id/inputEmailAddress"
+                    style="@style/AppTheme.EditText.Secondary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/component_special"
+                    android:drawableStart="@drawable/ic_mail"
+                    android:drawablePadding="@dimen/component_medium"
+                    android:hint="@string/text_email_address"
+                    android:inputType="textEmailAddress"
+                    android:lines="1" />
+
+                <inn.mroyek.halodokter.utils.components.AmEditText
+                    android:id="@+id/inputPassword"
+                    style="@style/AppTheme.EditText.Secondary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/component_medium"
+                    android:drawableStart="@drawable/ic_password"
+                    android:drawablePadding="@dimen/component_medium"
+                    android:hint="@string/text_password"
+                    android:inputType="textPassword"
+                    android:lines="1" />
+
+                <inn.mroyek.halodokter.utils.components.AmTextView
+                    android:id="@+id/buttonForgotPassword"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/input_height"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/component_extra_big"
+                    android:gravity="center"
+                    android:text="@string/text_forgot_password"
+                    android:textColor="@drawable/button_text_primary"
+                    android:textSize="@dimen/text_small"
+                    app:am_font_style="medium" />
+
+            </LinearLayout>
+
+            <inn.mroyek.halodokter.utils.components.AmButton
+                android:id="@+id/buttonLogIn"
+                style="@style/AppTheme.Button"
+                android:layout_width="150dp"
+                android:layout_height="@dimen/input_height"
+                android:layout_gravity="center"
+                android:layout_marginTop="-20dp"
+                android:background="@drawable/button_primary"
+                android:paddingStart="@dimen/component_extra_big"
+                android:paddingEnd="@dimen/component_extra_big"
+                android:text="@string/text_sign_in"
+                android:textAllCaps="true"
+                android:textSize="@dimen/text_small" />
+
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent">
+
+            <inn.mroyek.halodokter.utils.components.AmTextView
+                android:id="@+id/labelAccount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_dont_have_an_account"
+                android:textColor="@color/colorTextPrimary"
+                android:textSize="@dimen/text_small"
+                app:layout_constraintBottom_toBottomOf="@id/buttonRegister"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="@id/buttonRegister" />
+
+            <inn.mroyek.halodokter.utils.components.AmTextView
+                android:id="@+id/buttonRegister"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/input_height"
+                android:layout_marginStart="@dimen/component_small"
+                android:gravity="center"
+                android:text="@string/text_register_now"
+                android:textColor="@drawable/button_text_primary"
+                android:textSize="@dimen/text_small"
+                app:am_font_style="medium"
+                app:layout_constraintLeft_toRightOf="@id/labelAccount"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
