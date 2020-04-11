@@ -19,6 +19,31 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
+        <meta-data
+            android:name="firebase_crashlytics_collection_enabled"
+            android:value="true" />
+        <meta-data
+            android:name="firebase_messaging_auto_init_enabled"
+            android:value="true" />
+        <meta-data
+            android:name="firebase_analytics_collection_enabled"
+            android:value="true" />
+        <meta-data
+            android:name="firebase_performance_collection_enabled"
+            android:value="true" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="firebase_performance_logcat_enabled"
+            android:value="true" />
+
+        <service android:name=".utils.services.AmMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+
         <activity
             android:name=".view.auth.signup.SignUpActivity"
             android:launchMode="singleTop"
@@ -45,25 +70,6 @@
             android:launchMode="singleTop"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
-
-        <meta-data
-            android:name="firebase_crashlytics_collection_enabled"
-            android:value="true" />
-        <meta-data
-            android:name="firebase_messaging_auto_init_enabled"
-            android:value="true" />
-        <meta-data
-            android:name="firebase_analytics_collection_enabled"
-            android:value="true" />
-        <meta-data
-            android:name="firebase_performance_collection_enabled"
-            android:value="true" />
-        <meta-data
-            android:name="com.google.android.gms.version"
-            android:value="@integer/google_play_services_version" />
-        <meta-data
-            android:name="firebase_performance_logcat_enabled"
-            android:value="true" />
 
         <activity android:name=".MainActivity" />
         <activity

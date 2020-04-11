@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/AppTheme.Layout.Vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackgroundPrimary"
+    android:clipToPadding="false">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layoutTopUser"
+            style="@style/AppTheme.Margin.Horizontal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_round"
+            android:paddingLeft="@dimen/component_big"
+            android:paddingTop="@dimen/component_extra"
+            android:paddingRight="@dimen/component_big"
+            android:paddingBottom="@dimen/component_extra"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="RtlSymmetry">
+
+            <ImageView
+                android:id="@+id/imageProfilePicture"
+                android:layout_width="@dimen/profile_picture_big"
+                android:layout_height="@dimen/profile_picture_big"
+                android:background="@drawable/shape_circle_placeholder"
+                android:contentDescription="@string/text_profile_picture"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/component_small"
+                app:layout_constraintBottom_toBottomOf="@id/imageProfilePicture"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/imageProfilePicture"
+                app:layout_constraintTop_toTopOf="@id/imageProfilePicture">
+
+                <inn.mroyek.halodokter.utils.components.AmTextView
+                    android:id="@+id/labelName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/component_medium"
+                    android:text="@string/text_dash"
+                    android:textColor="@color/colorTextPrimary"
+                    android:textSize="@dimen/text_medium"
+                    app:am_font_style="bold"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <inn.mroyek.halodokter.utils.components.AmTextView
+                    android:id="@+id/labelPhone"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_dash"
+                    android:textColor="@color/colorTextPrimary"
+                    android:textSize="@dimen/text_small"
+                    app:layout_constraintLeft_toLeftOf="@id/labelName"
+                    app:layout_constraintRight_toRightOf="@id/labelName"
+                    app:layout_constraintTop_toBottomOf="@id/labelName" />
+
+                <RatingBar
+                    android:id="@+id/ratingBar"
+                    style="@style/AppTheme.RatingBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_marginTop="@dimen/component_normal"
+                    android:layout_marginEnd="30dp"
+                    android:numStars="5"
+                    android:rating="3"
+                    android:scaleX="1.2"
+                    android:scaleY="1.2"
+                    android:stepSize="1.0"
+                    android:transformPivotX="0dp"
+                    android:transformPivotY="0dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/labelPhone" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layoutUserInformation"
+            style="@style/AppTheme.Margin.Horizontal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/component_extra"
+            android:background="@drawable/shape_round"
+            android:padding="@dimen/component_extra"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layoutTopUser">
+
+            <inn.mroyek.halodokter.utils.components.AmTextView
+                android:id="@+id/labelUserInformation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_user_information"
+                android:textColor="@color/colorTextPrimary"
+                android:textSize="@dimen/text_medium"
+                app:am_font_style="bold"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <inn.mroyek.halodokter.utils.components.AmTextView
+                android:id="@+id/buttonSignOut"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/component_big"
+                android:text="@string/text_sign_out"
+                android:textAllCaps="true"
+                android:textColor="@drawable/button_text_primary"
+                android:textSize="@dimen/text_small"
+                app:am_font_style="bold"
+                app:layout_constraintBottom_toBottomOf="@id/labelUserInformation"
+                app:layout_constraintRight_toLeftOf="@id/buttonEdit"
+                app:layout_constraintTop_toTopOf="@id/labelUserInformation" />
+
+            <inn.mroyek.halodokter.utils.components.AmTextView
+                android:id="@+id/buttonEdit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_edit"
+                android:textAllCaps="true"
+                android:textColor="@drawable/button_text_primary"
+                android:textSize="@dimen/text_small"
+                app:am_font_style="bold"
+                app:layout_constraintBottom_toBottomOf="@id/labelUserInformation"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@id/labelUserInformation" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/component_big"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@id/labelUserInformation">
+
+                <inn.mroyek.halodokter.utils.components.AmTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/component_medium"
+                    android:text="@string/text_email_address"
+                    android:textColor="@color/colorTextSecondary"
+                    android:textSize="@dimen/text_small" />
+
+                <inn.mroyek.halodokter.utils.components.AmTextView
+                    android:id="@+id/labelEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_dash"
+                    android:textColor="@color/colorTextPrimary"
+                    app:am_font_style="medium" />
+
+                <inn.mroyek.halodokter.utils.components.AmTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/component_medium"
+                    android:text="@string/text_blood_type"
+                    android:textColor="@color/colorTextSecondary"
+                    android:textSize="@dimen/text_small" />
+
+                <inn.mroyek.halodokter.utils.components.AmTextView
+                    android:id="@+id/labelBloodType"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_dash"
+                    android:textColor="@color/colorTextPrimary"
+                    app:am_font_style="medium" />
+
+                <inn.mroyek.halodokter.utils.components.AmTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/component_medium"
+                    android:text="@string/text_age_range"
+                    android:textColor="@color/colorTextSecondary"
+                    android:textSize="@dimen/text_small" />
+
+                <inn.mroyek.halodokter.utils.components.AmTextView
+                    android:id="@+id/labelAgeRange"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_dash"
+                    android:textColor="@color/colorTextPrimary"
+                    app:am_font_style="medium" />
+
+                <inn.mroyek.halodokter.utils.components.AmTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/component_medium"
+                    android:text="@string/text_sex"
+                    android:textColor="@color/colorTextSecondary"
+                    android:textSize="@dimen/text_small" />
+
+                <inn.mroyek.halodokter.utils.components.AmTextView
+                    android:id="@+id/labelSex"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_dash"
+                    android:textColor="@color/colorTextPrimary"
+                    app:am_font_style="medium" />
+
+                <inn.mroyek.halodokter.utils.components.AmTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/component_medium"
+                    android:text="@string/text_history"
+                    android:textColor="@color/colorTextSecondary"
+                    android:textSize="@dimen/text_small" />
+
+                <inn.mroyek.halodokter.utils.components.AmTextView
+                    android:id="@+id/labelHistory"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_dash"
+                    android:textColor="@color/colorTextPrimary"
+                    app:am_font_style="medium" />
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutBottom"
+            style="@style/AppTheme.Layout.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/component_extra"
+            android:baselineAligned="false"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            app:layout_constraintTop_toBottomOf="@id/layoutUserInformation">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/component_small"
+                android:layout_weight="1"
+                android:background="@drawable/button_light"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="@dimen/component_extra">
+
+                <ImageView
+                    android:id="@+id/imageIconCheckup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/text_check_up"
+                    android:src="@drawable/ic_checkups"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <inn.mroyek.halodokter.utils.components.AmTextView
+                    android:id="@+id/labelTitleCheckup"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/component_medium"
+                    android:text="@string/text_check_up"
+                    android:textColor="@color/colorTextSecondary"
+                    android:textSize="@dimen/text_small"
+                    app:layout_constraintLeft_toRightOf="@id/imageIconCheckup"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <inn.mroyek.halodokter.utils.components.AmTextView
+                    android:id="@+id/textCheckUp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:lines="1"
+                    android:text="@string/text_dash"
+                    android:textColor="@color/colorTextPrimary"
+                    app:am_font_style="medium"
+                    app:layout_constraintLeft_toLeftOf="@id/labelTitleCheckup"
+                    app:layout_constraintRight_toRightOf="@id/labelTitleCheckup"
+                    app:layout_constraintTop_toBottomOf="@id/labelTitleCheckup" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/component_small"
+                android:layout_weight="1"
+                android:background="@drawable/button_light"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="@dimen/component_extra">
+
+                <ImageView
+                    android:id="@+id/imageIconMedicine"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/text_medicine"
+                    android:src="@drawable/ic_medicine"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <inn.mroyek.halodokter.utils.components.AmTextView
+                    android:id="@+id/labelTitleMedicine"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/component_medium"
+                    android:text="@string/text_medicine"
+                    android:textColor="@color/colorTextSecondary"
+                    android:textSize="@dimen/text_small"
+                    app:layout_constraintLeft_toRightOf="@id/imageIconMedicine"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <inn.mroyek.halodokter.utils.components.AmTextView
+                    android:id="@+id/textMedicine"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:lines="1"
+                    android:text="@string/text_dash"
+                    android:textColor="@color/colorTextPrimary"
+                    app:am_font_style="medium"
+                    app:layout_constraintLeft_toLeftOf="@id/labelTitleMedicine"
+                    app:layout_constraintRight_toRightOf="@id/labelTitleMedicine"
+                    app:layout_constraintTop_toBottomOf="@id/labelTitleMedicine" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

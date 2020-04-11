@@ -1,6 +1,7 @@
 package inn.mroyek.halodokter.utils.extensions
 
 import com.google.firebase.firestore.FirebaseFirestore
+import inn.mroyek.halodokter.struct.Location
 import inn.mroyek.halodokter.struct.User
 
 /*import com.google.firebase.firestore.FirebaseFirestore
@@ -11,6 +12,8 @@ import inn.mroyek.halodokter.utils.components.slider.AmImage*/
 
 fun FirebaseFirestore.user() = collection(User.tableName)
 fun FirebaseFirestore.user(uid: String?) = collection(User.tableName).document(uid.toString())
+fun FirebaseFirestore.location() = collection(Location.tableName)
+
 /*
 
 fun FirebaseFirestore.doctors() = collection(User.tableName).whereEqualTo(User.CREATOR.Fields.category, DOCTOR)
@@ -21,7 +24,6 @@ fun FirebaseFirestore.specialists() = collection(Specialist.tableName)
 
 fun FirebaseFirestore.articles() = collection(Article.tableName)
 
-fun FirebaseFirestore.location() = collection(Location.tableName)
 
 fun FirebaseFirestore.favorite() = collection(Favorite.tableName)
 

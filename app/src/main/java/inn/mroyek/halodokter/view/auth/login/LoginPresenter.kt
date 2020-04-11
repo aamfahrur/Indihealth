@@ -4,11 +4,14 @@ import android.content.Context
 import inn.mroyek.halodokter.App
 import inn.mroyek.halodokter.R
 import inn.mroyek.halodokter.utils.commons.Preferences
+import inn.mroyek.halodokter.utils.services.AmMessagingService
 
-class LoginPresenter (private val view: LoginContract.View, private val context: Context) : LoginContract.Presenter {
+class LoginPresenter(private val view: LoginContract.View, private val context: Context) :
+    LoginContract.Presenter {
     init {
         view.presenter = this
     }
+
     override fun checkSession() {
 
     }
@@ -26,8 +29,12 @@ class LoginPresenter (private val view: LoginContract.View, private val context:
 
         App.mAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener {
             view.progress(false)
-            if (it.isSuccessful){
+            if (it.isSuccessful) {
                 App.mAuth.currentUser?.let { user ->
+                    AmMessagingService().storeOnline(true)
+                    AmMessagingService().storeToken(Preferences(context).getToken())
+                    App.mMessaging.subscribeToTopic(context.getString(R.string.app_channel))
+
                     Preferences(context).storeUid(user.uid)
                     view.showMain()
                 }

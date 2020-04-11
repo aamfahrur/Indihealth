@@ -17,7 +17,7 @@ class User(
     var blood: String? = "",
     var sex: String? = "",
     var phoneNumber: String? = "",
-    var ration: Float = 0.0f,
+    var rating: Float = 0.0f,
     var emailVerified: Boolean = false,
     var category: Int = Constants.USER.PATIENT,
     var location: GeoPoint = GeoPoint(0.0,0.0),
@@ -55,7 +55,7 @@ class User(
         parcel.writeString(blood)
         parcel.writeString(sex)
         parcel.writeString(phoneNumber)
-        parcel.writeFloat(ration)
+        parcel.writeFloat(rating)
         parcel.writeByte(if (emailVerified) 1 else 0)
         parcel.writeInt(category)
         parcel.writeString(pushId)
@@ -88,7 +88,7 @@ class User(
             const val blood = "blood"
             const val sex = "sex"
             const val phoneNumber = "phoneNumber"
-            const val ration = "ration"
+            const val rating = "rating"
             const val emailVerified = "emailVerified"
             const val category = "category"
             const val location = "location"

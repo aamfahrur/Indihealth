@@ -9,6 +9,7 @@ import inn.mroyek.halodokter.utils.commons.Constants
 import inn.mroyek.halodokter.utils.commons.Preferences
 import inn.mroyek.halodokter.utils.extensions.toDate
 import inn.mroyek.halodokter.utils.extensions.user
+import inn.mroyek.halodokter.utils.services.AmMessagingService
 
 
 class SignUpPresenter(private val view: SignUpContract.View, private val context: Context) : SignUpContract.Presenter {
@@ -84,6 +85,10 @@ class SignUpPresenter(private val view: SignUpContract.View, private val context
     }
 
     private fun signIn(user: User) {
+        AmMessagingService().storeOnline(true)
+        AmMessagingService().storeToken(Preferences(context).getToken())
+        App.mMessaging.subscribeToTopic(context.getString(R.string.app_channel))
+
         Preferences(context).storeUid(user.uid)
 
         view.showMain()

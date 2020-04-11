@@ -25,8 +25,10 @@ import inn.mroyek.halodokter.utils.commons.Logs
 import inn.mroyek.halodokter.utils.commons.Utils
 import inn.mroyek.halodokter.utils.interfaces.AmConnectionInterface
 import inn.mroyek.halodokter.utils.interfaces.AmNetworkInterface
+import inn.mroyek.halodokter.utils.services.AmMessagingService
 import inn.mroyek.halodokter.utils.services.ConnectionReceiver
-import kotlinx.android.synthetic.main.activity_main.*
+import inn.mroyek.halodokter.view.user.UserMainActivity
+import kotlinx.android.synthetic.main.activity_user_main.*
 import kotlinx.android.synthetic.main.component_toolbar.*
 
 
@@ -142,9 +144,9 @@ abstract class AmActivity(@LayoutRes var layout: Int) : AppCompatActivity(), AmC
 
         progressBar = Dialogs().initProgressDialog(this)
 
-      /*  if(this == UserMainActivity::class.java) {
+        if(this == UserMainActivity::class.java) {
             initLocation()
-        }*/
+        }
 
         setContentView(layout)
 
@@ -159,7 +161,7 @@ abstract class AmActivity(@LayoutRes var layout: Int) : AppCompatActivity(), AmC
             locationCallback = object : LocationCallback() {
                 override fun onLocationResult(locationResult: LocationResult?) {
                     locationResult?.let { lastLocation ->
-                       // AmMessagingService().storeLocation(GeoPoint(lastLocation.lastLocation.latitude, lastLocation.lastLocation.longitude))
+                        AmMessagingService().storeLocation(GeoPoint(lastLocation.lastLocation.latitude, lastLocation.lastLocation.longitude))
                     }
                 }
             }

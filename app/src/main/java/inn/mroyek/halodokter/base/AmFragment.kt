@@ -1,7 +1,6 @@
 package inn.mroyek.halodokter.base
 
 import android.os.Bundle
-import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -11,7 +10,7 @@ import androidx.fragment.app.Fragment
 import com.google.android.material.snackbar.Snackbar
 import inn.mroyek.halodokter.utils.commons.Utils
 import inn.mroyek.halodokter.utils.interfaces.AmNetworkInterface
-import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.activity_user_main.*
 
 abstract class AmFragment (@LayoutRes var layout: Int, @StringRes var titleDefault: Int? = null) : Fragment(), AmNetworkInterface {
 
