@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="inn.mroyek.halodokter">
+    package="com.aamfahrur.indihealth">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -11,7 +11,7 @@
     <uses-feature android:name="android.hardware.camera" />
 
     <application
-        android:name=".App"
+        android:name="com.aamfahrur.indihealth.App"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -38,42 +38,42 @@
             android:name="firebase_performance_logcat_enabled"
             android:value="true" />
 
-        <service android:name=".utils.services.AmMessagingService">
+        <service android:name="com.aamfahrur.indihealth.utils.services.AmMessagingService">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT"/>
             </intent-filter>
         </service>
 
         <activity
-            android:name=".view.auth.signup.SignUpActivity"
+            android:name="com.aamfahrur.indihealth.view.auth.signup.SignUpActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.Auth">
 
         </activity>
         <activity
-            android:name=".view.auth.forgot.ForgotPasswordActivity"
+            android:name="com.aamfahrur.indihealth.view.auth.forgot.ForgotPasswordActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.Auth">
 
         </activity>
         <activity
-            android:name=".view.auth.login.LoginActivity"
+            android:name="com.aamfahrur.indihealth.view.auth.login.LoginActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.Auth">
 
         </activity>
         <activity
-            android:name=".view.user.UserMainActivity"
+            android:name="com.aamfahrur.indihealth.view.user.UserMainActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
 
-        <activity android:name=".MainActivity" />
+        <activity android:name="com.aamfahrur.indihealth.MainActivity" />
         <activity
-            android:name=".view.splash.SplashActivity"
+            android:name="com.aamfahrur.indihealth.view.splash.SplashActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.Splash">
             <intent-filter>

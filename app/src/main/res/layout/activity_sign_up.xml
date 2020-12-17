@@ -41,7 +41,7 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
-                    <inn.mroyek.halodokter.utils.components.AmTextView
+                    <com.aamfahrur.indihealth.utils.components.AmTextView
                         android:textSize="@dimen/text_special"
                         android:textColor="@color/colorTextAccent"
                         android:layout_gravity="center"
@@ -49,7 +49,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
 
-                    <inn.mroyek.halodokter.utils.components.AmTextView
+                    <com.aamfahrur.indihealth.utils.components.AmTextView
                         app:am_font_style="medium"
                         android:layout_marginTop="@dimen/component_tiny"
                         android:layout_gravity="center"
@@ -59,7 +59,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
 
-                    <inn.mroyek.halodokter.utils.components.AmEditText
+                    <com.aamfahrur.indihealth.utils.components.AmEditText
                         android:layout_marginTop="@dimen/component_special"
                         android:drawableStart="@drawable/ic_user"
                         android:drawablePadding="@dimen/component_medium"
@@ -71,7 +71,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"/>
 
-                    <inn.mroyek.halodokter.utils.components.AmEditText
+                    <com.aamfahrur.indihealth.utils.components.AmEditText
                         android:layout_marginTop="@dimen/component_medium"
                         android:drawableStart="@drawable/ic_mail"
                         android:drawablePadding="@dimen/component_medium"
@@ -83,7 +83,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"/>
 
-                    <inn.mroyek.halodokter.utils.components.AmEditText
+                    <com.aamfahrur.indihealth.utils.components.AmEditText
                         android:layout_marginTop="@dimen/component_medium"
                         android:drawableStart="@drawable/ic_password"
                         android:drawablePadding="@dimen/component_medium"
@@ -95,7 +95,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"/>
 
-                    <inn.mroyek.halodokter.utils.components.AmEditText
+                    <com.aamfahrur.indihealth.utils.components.AmEditText
                         android:layout_marginTop="@dimen/component_medium"
                         android:drawableStart="@drawable/ic_phone"
                         android:drawablePadding="@dimen/component_medium"
@@ -108,7 +108,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"/>
 
-                    <inn.mroyek.halodokter.utils.components.AmEditText
+                    <com.aamfahrur.indihealth.utils.components.AmEditText
                         android:clickable="true"
                         android:focusable="false"
                         android:layout_marginTop="@dimen/component_medium"
@@ -123,7 +123,7 @@
                         android:layout_height="wrap_content"
                         tools:ignore="KeyboardInaccessibleWidget"/>
 
-                    <inn.mroyek.halodokter.utils.components.AmTextView
+                    <com.aamfahrur.indihealth.utils.components.AmTextView
                         android:layout_marginTop="@dimen/component_extra_big"
                         android:id="@+id/buttonTermsAndConditions"
                         android:layout_gravity="center"
@@ -137,7 +137,7 @@
 
                 </LinearLayout>
 
-                <inn.mroyek.halodokter.utils.components.AmButton
+                <com.aamfahrur.indihealth.utils.components.AmButton
                     android:layout_marginTop="-20dp"
                     android:id="@+id/buttonJoin"
                     style="@style/AppTheme.Button"

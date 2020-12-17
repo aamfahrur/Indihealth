@@ -15,7 +15,7 @@
         android:background="@color/colorBackgroundSecondary"
         app:popupTheme="@style/AppTheme">
 
-        <inn.mroyek.halodokter.utils.components.AmTextView
+        <com.aamfahrur.indihealth.utils.components.AmTextView
             android:id="@+id/toolbarTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -33,7 +33,7 @@
             android:src="@drawable/shape_circle_placeholder"
             android:visibility="gone" />
 
-        <inn.mroyek.halodokter.utils.components.AmEditText
+        <com.aamfahrur.indihealth.utils.components.AmEditText
             android:id="@+id/toolbarSearch"
             style="@style/AppTheme.EditText.Accent"
             android:layout_width="match_parent"

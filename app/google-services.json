@@ -1,42 +1,41 @@
 {
   "project_info": {
-    "project_number": "562119138071",
-    "firebase_url": "https://halo-dokter.firebaseio.com",
-    "project_id": "halo-dokter",
-    "storage_bucket": "halo-dokter.appspot.com"
+    "project_number": "536966963305",
+    "project_id": "indihealth-cf7ad",
+    "storage_bucket": "indihealth-cf7ad.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:562119138071:android:8e7c36cd388f42106ff552",
+        "mobilesdk_app_id": "1:536966963305:android:2e36d6a08bd8f2f417c2f8",
         "android_client_info": {
-          "package_name": "inn.mroyek.halodokter"
+          "package_name": "com.aamfahrur.indihealth"
         }
       },
       "oauth_client": [
         {
-          "client_id": "562119138071-hkttqiugg3tkcocprlivhcmlddnk781u.apps.googleusercontent.com",
+          "client_id": "536966963305-394t2rnbi7orak0gfni2d2sn8kflefs2.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "inn.mroyek.halodokter",
-            "certificate_hash": "05d5a74821a07f4c7aff1a422c6ad0aa4ec9756c"
+            "package_name": "com.aamfahrur.indihealth",
+            "certificate_hash": "a0f965a8344460e0d0e99e0c90f01f04de9030b3"
           }
         },
         {
-          "client_id": "562119138071-jm2rd78klbgmjsm2do3ll9h4k6tdf6qo.apps.googleusercontent.com",
+          "client_id": "536966963305-tqqj4lvef85ochvb7ddss28tc9hrqf70.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBaN4k9BmquUKP3kisfm5_qkRBtIhq_Mpc"
+          "current_key": "AIzaSyD814irSMIkCSbpc4uolcFNlfha5z27-DM"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "562119138071-jm2rd78klbgmjsm2do3ll9h4k6tdf6qo.apps.googleusercontent.com",
+              "client_id": "536966963305-tqqj4lvef85ochvb7ddss28tc9hrqf70.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

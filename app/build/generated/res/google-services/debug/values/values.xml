@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">536966963305-tqqj4lvef85ochvb7ddss28tc9hrqf70.apps.googleusercontent.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">536966963305</string>
+    <string name="google_api_key" translatable="false">AIzaSyD814irSMIkCSbpc4uolcFNlfha5z27-DM</string>
+    <string name="google_app_id" translatable="false">1:536966963305:android:2e36d6a08bd8f2f417c2f8</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyD814irSMIkCSbpc4uolcFNlfha5z27-DM</string>
+    <string name="google_storage_bucket" translatable="false">indihealth-cf7ad.appspot.com</string>
+    <string name="project_id" translatable="false">indihealth-cf7ad</string>
+</resources>
